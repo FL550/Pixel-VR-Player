@@ -3909,10 +3909,14 @@ int App::run() {
             // blindly, and a flat dock popping up over the whole view is
             // distracting, so it doesn't wake the UI. Scrubbing (left X) does.
             const bool sphereView = settings_.projectionMode() != 0;
+            // Stick scrubbing of an open video is silent: it must not wake the HUD either.
+            const bool scrubSilent = cur().open;
             const bool stickMoved =
-                sphereView ? (std::fabs(in.thumbstickLX) > 0.25f || std::fabs(in.thumbstickLY) > 0.25f)
+                sphereView ? ((!scrubSilent && std::fabs(in.thumbstickLX) > 0.25f) ||
+                              std::fabs(in.thumbstickLY) > 0.25f)
                            : (std::fabs(in.thumbstickX) > 0.25f || std::fabs(in.thumbstickY) > 0.25f ||
-                              std::fabs(in.thumbstickRX) > 0.25f || std::fabs(in.thumbstickRY) > 0.25f);
+                              (!scrubSilent && std::fabs(in.thumbstickRX) > 0.25f) ||
+                              std::fabs(in.thumbstickRY) > 0.25f);
             // Only the digital full grip press or an action wakes the HUD (a soft
             // squeeze from a resting hand doesn't). Show / Hide UI toggles it
             // explicitly below; the combo gate and the keyboard consumed theirs.
@@ -5766,7 +5770,7 @@ int App::run() {
                     pluginScrubbing_ = scrubInput || (renderer_.pointerOnTimeline() && in.selectHeld);
                     if (scrubInput) {
                         scrubbing_ = true;
-                        interacted = true;
+                        if (renderer_.pointerOnTimeline() && in.selectHeld) interacted = true;
                     } else if (scrubbing_) {
                         curSeek(scrubTarget_);  // commit the scrub with one seek
                         scrubbing_ = false;

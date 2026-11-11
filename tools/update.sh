@@ -3,7 +3,7 @@
 # Downloads and installs the latest release in-place.
 set -eu
 
-REPO="Pixelplanet/Pixel-VR-Player"
+REPO="FL550/Pixel-VR-Player"
 # Always the real install, never the folder this script happens to sit in: an
 # unpacked release copied to the Desktop has an update.sh next to it too.
 INSTALL_DIR="${PIXELVR_INSTALL_DIR:-$HOME/PixelVRPlayer}"

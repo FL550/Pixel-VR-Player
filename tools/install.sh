@@ -2,7 +2,7 @@
 # Pixel VR Player installer for the Valve Steam Frame.
 #
 # Download-and-run (no other files needed):
-#   curl -fsSL https://raw.githubusercontent.com/Pixelplanet/Pixel-VR-Player/main/tools/install.sh | sh
+#   curl -fsSL https://raw.githubusercontent.com/FL550/Pixel-VR-Player/main/tools/install.sh | sh
 #
 # Or from an extracted release tarball:
 #   ./install.sh
@@ -43,7 +43,7 @@ if [ -z "${PIXELVR_INSTALL_LOGGING:-}" ] && [ -f "$0" ] && command -v tee >/dev/
 fi
 logline() { [ -n "${PIXELVR_INSTALL_LOGGING:-}" ] || printf '%s\n' "$*" >> "$LOG_FILE" 2>/dev/null || true; }
 
-REPO="Pixelplanet/Pixel-VR-Player"
+REPO="FL550/Pixel-VR-Player"
 ASSET="pixelvr-linux-arm64.tar.gz"
 APP_NAME="Pixel VR Player"
 
@@ -78,7 +78,7 @@ usage() {
 Pixel VR Player installer for the Valve Steam Frame.
 
 Usage:
-  curl -fsSL https://raw.githubusercontent.com/Pixelplanet/Pixel-VR-Player/main/tools/install.sh | sh
+  curl -fsSL https://raw.githubusercontent.com/FL550/Pixel-VR-Player/main/tools/install.sh | sh
   ./install.sh [options]
 
 Options:
@@ -818,7 +818,7 @@ write_update_icon() {
 [Desktop Entry]
 Name=Update Pixel VR Player
 Comment=Update Pixel VR Player to the latest version on Valve Steam Frame
-Exec=bash -c 'export PIXELVR_GUI=1; if [ -f "$HOME/PixelVRPlayer/update.sh" ]; then bash "$HOME/PixelVRPlayer/update.sh"; else curl -fsSL https://raw.githubusercontent.com/Pixelplanet/Pixel-VR-Player/main/tools/install.sh | bash -s -- --update; fi; rc=$?; if [ $rc -ne 0 ]; then command -v kdialog >/dev/null && kdialog --title "Pixel VR Player" --detailederror "Update failed. Details:" "$(tail -n 15 "$HOME/PixelVRPlayer/logs/install.log" 2>/dev/null)"; fi'
+Exec=bash -c 'export PIXELVR_GUI=1; if [ -f "$HOME/PixelVRPlayer/update.sh" ]; then bash "$HOME/PixelVRPlayer/update.sh"; else curl -fsSL https://raw.githubusercontent.com/FL550/Pixel-VR-Player/main/tools/install.sh | bash -s -- --update; fi; rc=$?; if [ $rc -ne 0 ]; then command -v kdialog >/dev/null && kdialog --title "Pixel VR Player" --detailederror "Update failed. Details:" "$(tail -n 15 "$HOME/PixelVRPlayer/logs/install.log" 2>/dev/null)"; fi'
 Icon=steam
 Terminal=true
 Type=Application

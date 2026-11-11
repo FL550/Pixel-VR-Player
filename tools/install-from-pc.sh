@@ -21,9 +21,9 @@ echo ""
 
 EXTRA_ARGS="${*:-}"
 if [ -n "${EXTRA_ARGS}" ]; then
-    REMOTE_CMD="curl -fsSL https://raw.githubusercontent.com/Pixelplanet/Pixel-VR-Player/main/tools/install.sh | sh -s -- ${EXTRA_ARGS}"
+    REMOTE_CMD="curl -fsSL https://raw.githubusercontent.com/FL550/Pixel-VR-Player/main/tools/install.sh | sh -s -- ${EXTRA_ARGS}"
 else
-    REMOTE_CMD="curl -fsSL https://raw.githubusercontent.com/Pixelplanet/Pixel-VR-Player/main/tools/install.sh | sh"
+    REMOTE_CMD="curl -fsSL https://raw.githubusercontent.com/FL550/Pixel-VR-Player/main/tools/install.sh | sh"
 fi
 
 if ssh -o StrictHostKeyChecking=no "steamos@${FRAME_IP}" "${REMOTE_CMD}"; then

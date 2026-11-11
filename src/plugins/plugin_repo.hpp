@@ -15,7 +15,7 @@ namespace pixelvr {
 class PluginRepo {
 public:
     static constexpr const char* kIndexUrl =
-        "https://raw.githubusercontent.com/Pixelplanet/Pixel-VR-Player-Plugins/main/index.json";
+        "https://raw.githubusercontent.com/FL550/Pixel-VR-Player-Plugins/main/index.json";
 
     struct Entry {
         std::string id, name, version, description, url, sha256, minApp;

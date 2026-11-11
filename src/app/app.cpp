@@ -3914,8 +3914,8 @@ int App::run() {
             const bool stickMoved =
                 sphereView ? ((!scrubSilent && std::fabs(in.thumbstickLX) > 0.25f) ||
                               std::fabs(in.thumbstickLY) > 0.25f)
-                           : (std::fabs(in.thumbstickX) > 0.25f || std::fabs(in.thumbstickY) > 0.25f ||
-                              (!scrubSilent && std::fabs(in.thumbstickRX) > 0.25f) ||
+                           : ((!scrubSilent && std::fabs(in.thumbstickX) > 0.25f) ||
+                              std::fabs(in.thumbstickY) > 0.25f ||
                               std::fabs(in.thumbstickRY) > 0.25f);
             // Only the digital full grip press or an action wakes the HUD (a soft
             // squeeze from a resting hand doesn't). Show / Hide UI toggles it
@@ -5735,11 +5735,9 @@ int App::run() {
                     if (!sphereMode && in.thumbstickLX > 0.6f && seekStepArmed_) {
                         curSeekRelative(kStep);
                         seekStepArmed_ = false;
-                        interacted = true;
                     } else if (!sphereMode && in.thumbstickLX < -0.6f && seekStepArmed_) {
                         curSeekRelative(-kStep);
                         seekStepArmed_ = false;
-                        interacted = true;
                     } else if (std::fabs(in.thumbstickLX) < 0.3f) {
                         seekStepArmed_ = true;
                     }

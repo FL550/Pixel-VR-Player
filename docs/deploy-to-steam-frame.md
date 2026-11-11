@@ -20,7 +20,7 @@ End users do not need to build anything or use devkits. Choose whichever option 
    Run [`tools/install-from-pc.bat`](../tools/install-from-pc.bat) (Windows) or [`tools/install-from-pc.sh`](../tools/install-from-pc.sh) (Mac/Linux) and enter the headset's IP address.
 3. **One command in terminal (Desktop Mode / SSH):**  
    ```bash
-   curl -fsSL https://raw.githubusercontent.com/Pixelplanet/Pixel-VR-Player/main/tools/install.sh | sh
+   curl -fsSL https://raw.githubusercontent.com/FL550/Pixel-VR-Player/main/tools/install.sh | sh
    ```
 
 The installer verifies checksums, installs to `~/PixelVRPlayer`, and registers **Pixel VR Player** as a Non-Steam Game in your library. Re-running upgrades in-place while keeping all settings, thumbnails, and hidden vault files (`~/.pixelvr_vault`).
@@ -34,7 +34,7 @@ To cleanly remove the application and its Steam shortcut:
 ~/PixelVRPlayer/install.sh --uninstall
 
 # Or one-liner:
-curl -fsSL https://raw.githubusercontent.com/Pixelplanet/Pixel-VR-Player/main/tools/install.sh | sh -s -- --uninstall
+curl -fsSL https://raw.githubusercontent.com/FL550/Pixel-VR-Player/main/tools/install.sh | sh -s -- --uninstall
 
 # Or from PC over Wi-Fi:
 ./tools/uninstall-from-pc.sh          # Mac/Linux

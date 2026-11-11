@@ -26,7 +26,7 @@ if %ERRORLEVEL% neq 0 (
     exit /b 1
 )
 
-set "REMOTE_CMD=curl -fsSL https://raw.githubusercontent.com/Pixelplanet/Pixel-VR-Player/main/tools/install.sh | sh -s -- --update"
+set "REMOTE_CMD=curl -fsSL https://raw.githubusercontent.com/FL550/Pixel-VR-Player/main/tools/install.sh | sh -s -- --update"
 
 ssh -o StrictHostKeyChecking=no steamos@!FRAME_IP! "!REMOTE_CMD!"
 

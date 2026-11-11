@@ -5,7 +5,7 @@
   "api": 1,
   "description": "Plays the .funscript next to a video on devices connected to Intiface Central (Buttplug.io). Untested with real devices: please report results.",
   "author": "Pixel VR Player",
-  "homepage": "https://github.com/Pixelplanet/Pixel-VR-Player",
+  "homepage": "https://github.com/FL550/Pixel-VR-Player",
   "license": "MIT",
   "exec": ["funscript"],
   "permissions": ["playback", "files.sidecar", "ui", "network"],

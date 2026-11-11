@@ -27,9 +27,9 @@ if %ERRORLEVEL% neq 0 (
 
 set "EXTRA_ARGS=%*"
 if "%EXTRA_ARGS%"=="" (
-    set "REMOTE_CMD=curl -fsSL https://raw.githubusercontent.com/Pixelplanet/Pixel-VR-Player/main/tools/install.sh | sh"
+    set "REMOTE_CMD=curl -fsSL https://raw.githubusercontent.com/FL550/Pixel-VR-Player/main/tools/install.sh | sh"
 ) else (
-    set "REMOTE_CMD=curl -fsSL https://raw.githubusercontent.com/Pixelplanet/Pixel-VR-Player/main/tools/install.sh | sh -s -- %EXTRA_ARGS%"
+    set "REMOTE_CMD=curl -fsSL https://raw.githubusercontent.com/FL550/Pixel-VR-Player/main/tools/install.sh | sh -s -- %EXTRA_ARGS%"
 )
 
 ssh -o StrictHostKeyChecking=no steamos@!FRAME_IP! "!REMOTE_CMD!"

@@ -49,7 +49,7 @@ paste this line and press Enter. On GitHub, the copy button at the top right of 
 copies it for you:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/Pixelplanet/Pixel-VR-Player/main/tools/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/FL550/Pixel-VR-Player/main/tools/install.sh | sh
 ```
 
 It downloads the latest release, installs it into `~/PixelVRPlayer` and adds
@@ -62,7 +62,7 @@ Prefer not to type anything? Choose one of these:
 ### Option A: Straight from the headset's browser (no typing, no PC)
 
 1. On the Steam Frame switch to **Desktop Mode** and open the web browser.
-2. Go to the [latest release](https://github.com/Pixelplanet/Pixel-VR-Player/releases/latest) and download **`pixelvr-linux-arm64.tar.gz`**.
+2. Go to the [latest release](https://github.com/FL550/Pixel-VR-Player/releases/latest) and download **`pixelvr-linux-arm64.tar.gz`**.
 3. Open your **Downloads** folder in Dolphin and double-click the `.tar.gz` — if you're asked which app to open it with, pick **Dolphin**. It opens like a folder (there is no "Extract" step).
 4. Drag the **`PixelVRPlayer`** folder onto the **Desktop** (or right-click it → **Copy**, then right-click the Desktop → **Paste**).
 5. Open the `PixelVRPlayer` folder on the Desktop and double-click **`Install Pixel VR Player`** (choose *Execute* if asked).
@@ -75,7 +75,7 @@ Prefer not to type anything? Choose one of these:
 
 ### Option B: USB Drive / MicroSD Card (No typing & No Dev Mode needed)
 
-1. Download `pixelvr-linux-arm64.tar.gz` from the [Releases](https://github.com/Pixelplanet/Pixel-VR-Player/releases) page onto a USB flash drive or MicroSD card.
+1. Download `pixelvr-linux-arm64.tar.gz` from the [Releases](https://github.com/FL550/Pixel-VR-Player/releases) page onto a USB flash drive or MicroSD card.
 2. Plug it into your Steam Frame and switch to **Desktop Mode**.
 3. Open the drive in Dolphin and double-click the `.tar.gz` (it opens like a folder), then follow steps 4–6 of Option A: drag **`PixelVRPlayer`** onto the Desktop, double-click **`Install Pixel VR Player`** there, click **OK**, and go back to Gaming Mode.
 
@@ -110,7 +110,7 @@ thumbnails (`~/.cache/pixelvr`), and hidden vault media (`~/.pixelvr_vault`) liv
 outside the install directory and are kept intact.
 
 **Offline install:** download `pixelvr-linux-arm64.tar.gz` from the
-[Releases](https://github.com/Pixelplanet/Pixel-VR-Player/releases) page, copy it to the headset, extract it and run
+[Releases](https://github.com/FL550/Pixel-VR-Player/releases) page, copy it to the headset, extract it and run
 `./install.sh` from the extracted folder — or use `run.sh` directly. The app logs
 to `~/pixelvr-run.log`.
 
@@ -164,12 +164,12 @@ Open **Konsole** on the headset or connect via SSH, then run:
 Or re-run the web installer command:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Pixelplanet/Pixel-VR-Player/main/tools/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/FL550/Pixel-VR-Player/main/tools/install.sh | sh
 ```
 
 ### Method 4: USB Drive / MicroSD Card (Offline)
 
-1. Download `pixelvr-linux-arm64.tar.gz` from the [Releases](https://github.com/Pixelplanet/Pixel-VR-Player/releases) page to a USB flash drive or MicroSD card.
+1. Download `pixelvr-linux-arm64.tar.gz` from the [Releases](https://github.com/FL550/Pixel-VR-Player/releases) page to a USB flash drive or MicroSD card.
 2. Plug it into your Steam Frame and open it in Desktop Mode.
 3. Open the archive, copy the `PixelVRPlayer` folder to the Desktop and double-click **`Install Pixel VR Player`** (or run `./install.sh --update` from it). It always updates `~/PixelVRPlayer`.
 
@@ -189,7 +189,7 @@ Run the uninstaller script directly:
 Or run the one-command uninstaller:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Pixelplanet/Pixel-VR-Player/main/tools/install.sh | sh -s -- --uninstall
+curl -fsSL https://raw.githubusercontent.com/FL550/Pixel-VR-Player/main/tools/install.sh | sh -s -- --uninstall
 ```
 
 This cleanly removes:

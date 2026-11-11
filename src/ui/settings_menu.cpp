@@ -477,7 +477,7 @@ void SettingsMenu::refresh() {
                     para("New plugins show up here as soon as they are published. Updates for your plugins");
                     para("appear as a **green arrow** on the Plugins page.");
                     para("");
-                    para("Missing a plugin? Request it at **github.com/Pixelplanet/Pixel-VR-Player-Plugins**");
+                    para("Missing a plugin? Request it at **github.com/FL550/Pixel-VR-Player-Plugins**");
                 }
             }
             status_ = shown ? "Pick a plugin to see what it does. New plugins start switched off." : "";

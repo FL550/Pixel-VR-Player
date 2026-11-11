@@ -24,7 +24,7 @@ if %ERRORLEVEL% neq 0 (
     exit /b 1
 )
 
-ssh -o StrictHostKeyChecking=no steamos@!FRAME_IP! "curl -fsSL https://raw.githubusercontent.com/Pixelplanet/Pixel-VR-Player/main/tools/install.sh | sh -s -- --uninstall"
+ssh -o StrictHostKeyChecking=no steamos@!FRAME_IP! "curl -fsSL https://raw.githubusercontent.com/FL550/Pixel-VR-Player/main/tools/install.sh | sh -s -- --uninstall"
 
 if %ERRORLEVEL% equ 0 (
     echo.

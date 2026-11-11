@@ -18,7 +18,7 @@ echo ""
 echo "Connecting to steamos@${FRAME_IP}..."
 echo ""
 
-if ssh -o StrictHostKeyChecking=no "steamos@${FRAME_IP}" "curl -fsSL https://raw.githubusercontent.com/Pixelplanet/Pixel-VR-Player/main/tools/install.sh | sh -s -- --uninstall"; then
+if ssh -o StrictHostKeyChecking=no "steamos@${FRAME_IP}" "curl -fsSL https://raw.githubusercontent.com/FL550/Pixel-VR-Player/main/tools/install.sh | sh -s -- --uninstall"; then
     echo ""
     echo "==============================================================="
     echo " [SUCCESS] Pixel VR Player removed from your Steam Frame!"

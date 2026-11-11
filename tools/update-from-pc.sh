@@ -20,7 +20,7 @@ echo "Connecting to steamos@${FRAME_IP}..."
 echo "(If prompted for a password, enter your SteamOS desktop password)"
 echo ""
 
-REMOTE_CMD="curl -fsSL https://raw.githubusercontent.com/Pixelplanet/Pixel-VR-Player/main/tools/install.sh | sh -s -- --update"
+REMOTE_CMD="curl -fsSL https://raw.githubusercontent.com/FL550/Pixel-VR-Player/main/tools/install.sh | sh -s -- --update"
 
 if ssh -o StrictHostKeyChecking=no "steamos@${FRAME_IP}" "${REMOTE_CMD}"; then
     echo ""

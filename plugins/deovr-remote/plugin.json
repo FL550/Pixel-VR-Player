@@ -5,7 +5,7 @@
   "api": 1,
   "description": "Only needed if you control your devices from MultiFunPlayer, ScriptPlayer, FunFlixDroid or XBVR on another device. They follow the video on the selected screen (name, position, pause) over your network, as they would follow DeoVR.",
   "author": "Pixel VR Player",
-  "homepage": "https://github.com/Pixelplanet/Pixel-VR-Player",
+  "homepage": "https://github.com/FL550/Pixel-VR-Player",
   "license": "MIT",
   "exec": ["deovr-remote"],
   "permissions": ["playback", "control", "network"],
